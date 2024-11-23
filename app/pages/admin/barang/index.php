@@ -39,12 +39,12 @@ while ($row = $result->fetch_assoc()) {
             <div class="card overflow-hidden rounded-2">
                 <div class="position-relative">
                     <img src="<?= $barang['gambar'] ?>" class="card-img-top rounded-0" alt="...">
-                    <a href="/index.php?page=delete-barang&id=<?= $barang['id'] ?>&action=delete"
+                    <a href="index.php?page=delete-barang&id=<?= $barang['id'] ?>&action=delete"
                         class="bg-danger rounded-circle p-2 text-white d-inline-flex position-absolute bottom-0 end-0 mb-n3 me-3"
                         data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Delete">
                         <i class="ti ti-trash fs-4"></i>
                     </a>
-                    <a href="/index.php?page=edit-barang&id=<?= $barang['id'] ?>"
+                    <a href="index.php?page=edit-barang&id=<?= $barang['id'] ?>"
                         class="bg-primary rounded-circle p-2 text-white d-inline-flex position-absolute bottom-0 end-0 mb-n3"
                         style="margin-right: 3.5rem;" data-bs-toggle="tooltip" data-bs-placement="top"
                         data-bs-title="Edit">

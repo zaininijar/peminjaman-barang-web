@@ -31,8 +31,8 @@ if (isset($_POST['pinjam'])) {
     $nama = $_POST['nama'];
     $barangId = $_POST['barang_id'];
     $jumlahPinjam = $_POST['jumlah'];
-    $alamat = $_POST['alamat'];
-    $noHandphone = $_POST['no_hp'];
+    $tanggal_pengembalian = $_POST['tanggal_pengembalian'];
+    $nim = $_POST['nim'];
     $deskripsi = $_POST['deskripsi'];
 
     if (getStokBarang($barangId, $jumlahPinjam) < 0) {
@@ -40,7 +40,7 @@ if (isset($_POST['pinjam'])) {
         return false;
     }
 
-    $sqlPinjam = "INSERT INTO peminjaman (barang_id, nama, jumlah, jumlah_awal, alamat, no_hp, deskripsi) VALUES ('$barangId', '$nama', '$jumlahPinjam', '$jumlahPinjam', '$alamat', '$noHandphone', '$deskripsi')";
+    $sqlPinjam = "INSERT INTO peminjaman (barang_id, nama, jumlah, jumlah_awal, tanggal_pengembalian, nim, deskripsi) VALUES ('$barangId', '$nama', '$jumlahPinjam', '$jumlahPinjam', '$tanggal_pengembalian', '$nim', '$deskripsi')";
     $db->query($sqlPinjam);
 
     if ($db->affected_rows > 0) {
@@ -102,6 +102,10 @@ function getStokBarang($idGetStok, $stokDec)
                             <input type="text" name="nama" class="form-control" id="nama">
                         </div>
                         <div class="mb-3">
+                            <label for="nim" class="form-label">NIM</label>
+                            <input type="text" name="nim" class="form-control" id="nim">
+                        </div>
+                        <div class="mb-3">
                             <label for="barang_id" class="form-label">Nama Barang</label>
                             <select class="form-control" name="barang_id" id="id-barang">
                                 <?php foreach($dataBarang as $barang) : ?>
@@ -110,16 +114,13 @@ function getStokBarang($idGetStok, $stokDec)
                             </select>
                         </div>
                         <div class="mb-3">
+                            <label for="tanggal_pengembalian" class="form-label">Tanggal Pengembalian</label>
+                            <input type="date" class="form-control" name="tanggal_pengembalian"
+                                id="tanggal_pengembalian" />
+                        </div>
+                        <div class="mb-3">
                             <label for="jumlah" class="form-label">Jumlah Pinjam</label>
                             <input type="number" name="jumlah" class="form-control" id="jumlah">
-                        </div>
-                        <div class="mb-3">
-                            <label for="alamat" class="form-label">Alamat</label>
-                            <textarea class="form-control" name="alamat" id="alamat" cols="30" rows="3"></textarea>
-                        </div>
-                        <div class="mb-3">
-                            <label for="no-hp" class="form-label">No Handphone</label>
-                            <input type="text" name="no_hp" class="form-control" id="no-hp">
                         </div>
                         <div class="mb-3">
                             <label for="deskripsi" class="form-label">Deskripsi</label>
@@ -150,7 +151,10 @@ function getStokBarang($idGetStok, $stokDec)
                                         <h6 class="fw-semibold mb-0">Jumlah Pinjam</h6>
                                     </th>
                                     <th class="border-bottom-0">
-                                        <h6 class="fw-semibold mb-0">Alamat</h6>
+                                        <h6 class="fw-semibold mb-0">Tanggal Pengembalian</h6>
+                                    </th>
+                                    <th class="border-bottom-0">
+                                        <h6 class="fw-semibold mb-0">Tanggal Peminjaman</h6>
                                     </th>
                                     <th class="border-bottom-0">
                                         <h6 class="fw-semibold mb-0">Desc</h6>
@@ -165,7 +169,7 @@ function getStokBarang($idGetStok, $stokDec)
                                     </td>
                                     <td class="border-bottom-0">
                                         <h6 class="fw-semibold mb-1"><?= $peminjaman['nama'] ?></h6>
-                                        <p class="mb-0" style="font-size: 10px;"><?= $peminjaman['no_hp'] ?></p>
+                                        <p class="mb-0" style="font-size: 10px;"><?= $peminjaman['nim'] ?></p>
                                         <span class="fw-normal"><?= $peminjaman['nama_barang'] ?></span>
                                     </td>
                                     <td class="border-bottom-0">
@@ -189,7 +193,12 @@ function getStokBarang($idGetStok, $stokDec)
                                         </div>
                                     </td>
                                     <td class="border-bottom-0">
-                                        <p class="mb-0 fw-normal text-wrap"><?= $peminjaman['alamat'] ?></p>
+                                        <p class="mb-0 fw-normal text-wrap"><?= $peminjaman['tanggal_pengembalian'] ?>
+                                        </p>
+                                    </td>
+                                    <td class="border-bottom-0">
+                                        <p class="mb-0 fw-normal text-wrap"><?= $peminjaman['create_time'] ?>
+                                        </p>
                                     </td>
                                     <td class="border-bottom-0">
                                         <p class="mb-0 fw-normal text-wrap"><?= $peminjaman['deskripsi'] ?></p>

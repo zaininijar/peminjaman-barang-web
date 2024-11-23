@@ -141,7 +141,7 @@ function updateJumlahPeminjaman($peminjamanId, $stokInc)
                                         <h6 class="fw-semibold mb-0">Jumlah Kembali</h6>
                                     </th>
                                     <th class="border-bottom-0">
-                                        <h6 class="fw-semibold mb-0">Alamat</h6>
+                                        <h6 class="fw-semibold mb-0">Tanggal Pengembalian</h6>
                                     </th>
                                 </tr>
                             </thead>
@@ -153,7 +153,7 @@ function updateJumlahPeminjaman($peminjamanId, $stokInc)
                                     </td>
                                     <td class="border-bottom-0">
                                         <h6 class="fw-semibold mb-1"><?= $pengembalian['nama_peminjam'] ?></h6>
-                                        <p class="mb-0"><?= $pengembalian['no_hp'] ?></p>
+                                        <p class="mb-0"><?= $pengembalian['nim'] ?></p>
                                         <span class="fw-normal"><?= $pengembalian['nama_barang'] ?></span>
                                     </td>
                                     <td class="border-bottom-0">
@@ -163,7 +163,7 @@ function updateJumlahPeminjaman($peminjamanId, $stokInc)
                                         </div>
                                     </td>
                                     <td class="border-bottom-0">
-                                        <p class="mb-0 fw-normal text-wrap"><?= $pengembalian['alamat'] ?></p>
+                                        <p class="mb-0 fw-normal text-wrap"><?= $pengembalian['create_time'] ?></p>
                                     </td>
                                 </tr>
                                 <?php endforeach; ?>

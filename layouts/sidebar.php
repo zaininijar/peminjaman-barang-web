@@ -1,7 +1,7 @@
 <aside class="left-sidebar">
     <div>
         <div class="brand-logo d-flex align-items-center justify-content-between">
-            <a href="/index.php?page=dashboard" class="text-nowrap logo-img" style="border-left: 2px solid #5D87FF;">
+            <a href="index.php?page=dashboard" class="text-nowrap logo-img" style="border-left: 2px solid #5D87FF;">
                 <h6 class="mt-5 ms-3 text-dark mb-n1" style="color: #aaaaaa !important;">Peminjaman</h6>
                 <h1 class="ms-3 text-primary" style="font-weight: bolder;">Barang</h1>
             </a>
@@ -16,7 +16,7 @@
                     <span class="hide-menu">Home</span>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link" data-currentPage="dashboard" href="/index.php?page=dashboard"
+                    <a class="sidebar-link" data-currentPage="dashboard" href="index.php?page=dashboard"
                         aria-expanded="false">
                         <span>
                             <i class="ti ti-layout-dashboard"></i>
@@ -29,7 +29,7 @@
                     <span class="hide-menu">Barang</span>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link" data-currentPage="barang" href="/index.php?page=barang"
+                    <a class="sidebar-link" data-currentPage="barang" href="index.php?page=barang"
                         aria-expanded="false">
                         <span>
                             <i class="ti ti-article"></i>
@@ -38,7 +38,7 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link" data-currentPage="tambah-barang" href="/index.php?page=tambah-barang"
+                    <a class="sidebar-link" data-currentPage="tambah-barang" href="index.php?page=tambah-barang"
                         aria-expanded="false">
                         <span>
                             <i class="ti ti-plus"></i>
@@ -58,7 +58,7 @@
                 </li>
                 <?php endif; ?>
                 <li class="sidebar-item">
-                    <a class="sidebar-link" data-currentPage="peminjaman" href="/index.php?page=peminjaman"
+                    <a class="sidebar-link" data-currentPage="peminjaman" href="index.php?page=peminjaman"
                         aria-expanded="false">
                         <span>
                             <i class="ti ti-arrow-left"></i>
@@ -67,7 +67,7 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link" data-currentPage="pengembalian" href="/index.php?page=pengembalian"
+                    <a class="sidebar-link" data-currentPage="pengembalian" href="index.php?page=pengembalian"
                         aria-expanded="false">
                         <span>
                             <i class="ti ti-arrow-right"></i>
@@ -76,7 +76,7 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link" data-currentPage="barang-hilang" href="/index.php?page=barang-hilang"
+                    <a class="sidebar-link" data-currentPage="barang-hilang" href="index.php?page=barang-hilang"
                         aria-expanded="false">
                         <span>
                             <i class="ti ti-trash"></i>

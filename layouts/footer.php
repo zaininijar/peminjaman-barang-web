@@ -5,9 +5,9 @@
 </div>
 </div>
 </div>
-<script src="../assets/libs/jquery/dist/jquery.min.js"></script>
-<script src="assets/js/mansory.js"></script>
-<script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="http://localhost/skripsi/assets/libs/jquery/dist/jquery.min.js"></script>
+<script src="http://localhost/skripsi/assets/js/mansory.js"></script>
+<script src="http://localhost/skripsi/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script>
 $('.grid').masonry({
     // options
@@ -15,13 +15,13 @@ $('.grid').masonry({
     columnWidth: 89
 });
 </script>
-<script src="../assets/js/sidebarmenu.js"></script>
-<script src="../assets/js/app.min.js"></script>
-<script src="../assets/libs/simplebar/dist/simplebar.js"></script>
+<script src="http://localhost/skripsi/assets/js/sidebarmenu.js"></script>
+<script src="http://localhost/skripsi/assets/js/app.min.js"></script>
+<script src="http://localhost/skripsi/assets/libs/simplebar/dist/simplebar.js"></script>
 
 <?php if(isset($_GET['page']) && $_GET['page'] == "dashboard") : ?>
-<script src="../assets/js/dashboard.js"></script>
-<script src="../assets/libs/apexcharts/dist/apexcharts.min.js"></script>
+<script src="http://localhost/skripsi/assets/js/dashboard.js"></script>
+<script src="http://localhost/skripsi/assets/libs/apexcharts/dist/apexcharts.min.js"></script>
 <?php endif; ?>
 
 

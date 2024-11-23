@@ -4,7 +4,7 @@
 $USERNAME = "root";
 $PASSWORD = "";
 $HOSTNAME = "localhost";
-$DBNAME = "db_peminjaman_barang";
+$DBNAME = "skripsi";
 
 $db = mysqli_connect($HOSTNAME, $USERNAME, $PASSWORD, $DBNAME);
 

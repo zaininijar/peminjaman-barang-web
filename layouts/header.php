@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Peminjaman Barang</title>
-    <link rel="shortcut icon" type="image/png" href="../assets/images/logos/favicon.png" />
-    <link rel="stylesheet" href="../assets/css/styles.min.css" />
+    <link rel="shortcut icon" type="image/png" href="http://localhost/skripsi/assets/images/logos/favicon.png" />
+    <link rel="stylesheet" href="http://localhost/skripsi/assets/css/styles.min.css" />
 </head>
 
 <body>
@@ -37,7 +37,7 @@
                             <li class="nav-item dropdown">
                                 <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2"
                                     data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="../assets/images/profile/user-1.jpg" alt="" width="35" height="35"
+                                    <img src="http://localhost/skripsi/assets/images/profile/user-1.jpg" alt="" width="35" height="35"
                                         class="rounded-circle">
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up"
